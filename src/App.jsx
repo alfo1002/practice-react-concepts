@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Navbar } from './components/Navbar'
-import { ConditionalRendering } from './components/General/ConditionalRendering'
+import { ListRendering } from './components/General/ListRendering'
 
 function App() {
 
@@ -11,7 +9,7 @@ function App() {
     <>
       <p>App</p>
       <Navbar />
-      <ConditionalRendering />
+      <ListRendering />
     </>
 
   )
