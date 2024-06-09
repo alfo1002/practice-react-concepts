@@ -9,3 +9,5 @@ Comandos útiles:
 
 Prácticas:
 - useState
+- renderizado condicional
+- renderizado de listas
