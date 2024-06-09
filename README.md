@@ -13,3 +13,5 @@ Prácticas:
 - renderizado de listas
 - envio de propiedades entre componentes
 - stopPropagation (detener propagación del arbol de componentes)
+- paso de propiedades de un hijo al padre y la propagación del padre a sus hijos (arbol de componentes)
+- practica con formularios simples y biblioteca react-hook-form
