@@ -1,7 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect, forwardRef } from "react"
 
-export const Navbar = ({ onSearch }) => {
+export const Navbar = forwardRef(({ onSearch }, ref) => {
     const [search, setSearch] = useState('')
+
+    useEffect(() => {
+        console.log('Navbar montado')
+    }, [search, onSearch])
+
     const handleInputChange = (e) => {
         setSearch(e.target.value)
     }
@@ -13,9 +18,9 @@ export const Navbar = ({ onSearch }) => {
     }
 
     return (
-        <div>
+        <div ref={ref}>
             <p>Eventos</p>
             <input type="text" placeholder="Buscar eventos" onChange={handleInputChange} onKeyDown={handleInputKeyDown} />
         </div>
     )
-}
+})
