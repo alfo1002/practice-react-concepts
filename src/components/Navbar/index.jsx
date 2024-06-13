@@ -18,9 +18,26 @@ export const Navbar = forwardRef(({ onSearch }, ref) => {
     }
 
     return (
-        <div ref={ref}>
-            <p>Eventos</p>
-            <input type="text" placeholder="Buscar eventos" onChange={handleInputChange} onKeyDown={handleInputKeyDown} />
-        </div>
+        <div ref={ref} style={{ marginBottom: 14, width: '100%', display: 'flex' }}>
+            <div style={{ flex: 1, display: 'flex' }}>
+                <p style={{ fontSize: 24, fontWeight: 'bold' }}>
+                    Eventos
+                </p>
+            </div>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                <input
+                    type="text" placeholder="Buscar eventos"
+                    onChange={handleInputChange} onKeyDown={handleInputKeyDown}
+                    value={search}
+                    style={{
+                        fontSize: 14,
+                        padding: '6px 12px',
+                        borderRadius: 4,
+                        border: 'none',
+                        width: 200,
+                    }}
+                />
+            </div>
+        </div >
     )
 })
