@@ -1,0 +1,16 @@
+.container {
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 60px;
+    color: #666610;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 20px;
+    color: #bdbdbb;
+    font-weight: 400;
+}

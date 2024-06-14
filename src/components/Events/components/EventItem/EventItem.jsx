@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 export const EventItem = ({ info, name, image, id, onHandleClick }) => {
@@ -14,6 +15,7 @@ export const EventItem = ({ info, name, image, id, onHandleClick }) => {
                 <h4 className='event-name'>{name}</h4>
                 <p className='event-info'>{info}</p>
                 <button onClick={handleSeeMoreClick} className='see-more-btn'>Ver más ....</button>
+                {/*<Link to={`/detail/${id}`} className='see-more-btn'>Ver más ....</Link>*/}
             </div>
         </div>
     )

@@ -18,3 +18,4 @@ Prácticas:
 - practica de useEffect, useRef, custom Hook, forwardRef
 - incorporar css en componente y a través de hoja de estilo
 - practicando routing con react router dom v6
+- usando useNavigate y Link para routing
