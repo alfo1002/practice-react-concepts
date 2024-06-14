@@ -17,3 +17,4 @@ Prácticas:
 - practica con formularios simples y biblioteca react-hook-form
 - practica de useEffect, useRef, custom Hook, forwardRef
 - incorporar css en componente y a través de hoja de estilo
+- practicando routing con react router dom v6
