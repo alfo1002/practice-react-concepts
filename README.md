@@ -20,3 +20,4 @@ Prácticas:
 - practicando routing con react router dom v6
 - usando useNavigate y Link para routing
 - practica con children y obtención de parametros por url con hook useParams de react-router-dom
+- modificar useEventsData para que utilice la API de Ticketmaster y obtenga los eventos en linea usando fetch()
