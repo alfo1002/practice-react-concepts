@@ -1,24 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import eventsJSON from '../data/events.json'
 
 export const useEventsData = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
+    const apikey = 'dAzvCvVUQjiWi6EBwtMHVixjmLGPlTXs'
+    const countryCode = 'MX'
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apikey}&countryCode=${countryCode}`
 
-    useEffect(() => {
-        const fetchEvents = async () => {
-            try {
-                const response = await fetch('https://app.ticketmaster.com/discovery/v2/events.json?apikey=Gq2uMPI6lfBZahnjxFfN5nbY0KBPuFAH&countryCode=MX')
-                const data = await response.json()
-                setData(data)
-                setIsLoading(false)
-            } catch (error) {
-                setError(error)
-            }
+    const fetchEvents = async (params) => {
+        try {
+            const response = await fetch(`${url}${params?.length ? params : ''}`)
+            const data = await response.json()
+            setData(data)
+            setIsLoading(false)
+        } catch (error) {
+            setError(error)
         }
-        fetchEvents()
-        /*setTimeout(() => {
+    }
+    //fetchEvents()
+    /*setTimeout(() => {
             //Call API
             try {
                 setData(eventsJSON)
@@ -28,12 +30,12 @@ export const useEventsData = () => {
                 setError(error)
             }
         }, 3000)*/
-    }, [])
 
     return {
         events: data?._embedded?.events || [],
         isLoading,
-        error
+        error,
+        fetchEvents
     }
 
 }
