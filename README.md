@@ -19,3 +19,4 @@ Prácticas:
 - incorporar css en componente y a través de hoja de estilo
 - practicando routing con react router dom v6
 - usando useNavigate y Link para routing
+- practica con children y obtención de parametros por url con hook useParams de react-router-dom
