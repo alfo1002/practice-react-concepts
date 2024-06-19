@@ -21,3 +21,5 @@ Prácticas:
 - usando useNavigate y Link para routing
 - practica con children y obtención de parametros por url con hook useParams de react-router-dom
 - modificar useEventsData para que utilice la API de Ticketmaster y obtenga los eventos en linea usando fetch()
+- mejorar reusabiidad de useEventsData para obtener eventos y pasarle parámetros de busqueda de eventos
+- aplicar paginación de eventos con libreria react-paginate
