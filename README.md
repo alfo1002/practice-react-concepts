@@ -24,3 +24,4 @@ Prácticas:
 - mejorar reusabiidad de useEventsData para obtener eventos y pasarle parámetros de busqueda de eventos
 - aplicar paginación de eventos con libreria react-paginate
 - ver detalle de un evento en específico y uso de date-fns y date-fns/locale
+- asegurando apikey en variable de entorno en .env

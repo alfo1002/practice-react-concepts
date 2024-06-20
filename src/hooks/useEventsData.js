@@ -5,9 +5,8 @@ export const useEventsData = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
-    const apikey = 'dAzvCvVUQjiWi6EBwtMHVixjmLGPlTXs'
     const countryCode = 'MX'
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apikey}&countryCode=${countryCode}`
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${import.meta.env.VITE_TICKETMASTER_API_KEY}&countryCode=${countryCode}`
 
     const fetchEvents = async (params) => {
         try {

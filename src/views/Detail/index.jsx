@@ -14,8 +14,7 @@ const Detail = () => {
     useEffect(() => {
         const fetchEventData = async () => {
             try {
-                const apikey = 'dAzvCvVUQjiWi6EBwtMHVixjmLGPlTXs'
-                const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}?apikey=${apikey}`)
+                const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}?apikey=${import.meta.env.VITE_TICKETMASTER_API_KEY}`)
                 const data = await response.json()
                 console.log('Data:', data)
                 setEventData(data)
@@ -56,8 +55,6 @@ const Detail = () => {
                 Ir por tus boletos
             </a>
         </div>
-
-
     )
 }
 
