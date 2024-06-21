@@ -5,14 +5,22 @@ import { SignupForm } from "../../components/SignupForm/SignupForm"
 import { useEventsData } from "../../hooks/useEventsData"
 import ReactPaginate from 'react-paginate'
 import styles from './Home.module.css'
+import useEventsResults from "../../state/events-results"
 
 
 export const Home = () => {
-    const { events, isLoading, error, fetchEvents, page } = useEventsData()
+    //Llamada a la API para obtener los eventos (metodo anterior)
+    //const { events, isLoading, error, fetchEvents, page } = useEventsData()
+
+    //Llamada al store de zustand
+    const { data, isLoading, error, fetchEvents } = useEventsResults()
+    const events = data?._embedded?.events || []
+    const page = data?.page || {}
     const [searchTerm, setSearchTerm] = useState('')
     const containerRef = useRef()
 
     useEffect(() => {
+        console.log('page:', page)
         fetchEvents()
     }, [])
 
@@ -49,7 +57,7 @@ export const Home = () => {
                     nextLabel=">"
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={2}
-                    pageCount={page.totalPages}
+                    pageCount={page?.totalPages}
                     previousLabel="<"
                     renderOnZeroPageCount={null}
                 />
