@@ -28,3 +28,4 @@ Prácticas:
 - practicando manejo del estado con zustand
 - practica con localstorage, guardando like y unlike
 - practica con useNavigate con las tabs
+- practica con localstorage para información del perfil de usuario

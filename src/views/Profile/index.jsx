@@ -17,7 +17,8 @@ export const Profile = () => {
                     onClick={() => handleTabClick('my-info')} style={{ marginRight: 8 }}>
                     Mi Información
                 </span>
-                <span className={`${pathname.includes('liked-events') ? styles.active : ''}${styles.tab}`} onClick={() => handleTabClick('liked-events')}>
+                <span className={`${pathname.includes('liked-events') ? styles.active : ''}${styles.tab}`}
+                    onClick={() => handleTabClick('liked-events')}>
                     Mis Eventos
                 </span>
             </div>
