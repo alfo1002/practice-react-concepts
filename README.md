@@ -26,3 +26,4 @@ Prácticas:
 - ver detalle de un evento en específico y uso de date-fns y date-fns/locale
 - asegurando apikey en variable de entorno en .env
 - practicando manejo del estado con zustand
+- practica con localstorage, guardando like y unlike
