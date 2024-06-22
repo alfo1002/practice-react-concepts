@@ -38,7 +38,7 @@ export const Navbar = forwardRef(({ onSearch }, ref) => {
                         width: 200,
                     }}
                 />
-                <Link to="/profile" style={{
+                <Link to="/profile/my-info" style={{
                     marginLeft: 24, color: '#fff', textDecoration: 'none'
                 }}>Mi Perfil</Link>
             </div>

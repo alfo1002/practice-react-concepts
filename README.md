@@ -27,3 +27,4 @@ Prácticas:
 - asegurando apikey en variable de entorno en .env
 - practicando manejo del estado con zustand
 - practica con localstorage, guardando like y unlike
+- practica con useNavigate con las tabs
