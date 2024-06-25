@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import { Navbar } from "../../components/Navbar"
 import { Events } from "../../components/Events/Events"
 import { SignupForm } from "../../components/SignupForm/SignupForm"
@@ -18,6 +18,7 @@ export const Home = () => {
     const page = data?.page || {}
     const [searchTerm, setSearchTerm] = useState('')
     const containerRef = useRef()
+    const [isToggle, setIsToogle] = useState(false)
 
     useEffect(() => {
         console.log('page:', page)
@@ -31,10 +32,10 @@ export const Home = () => {
         fetchEvents(`&keyword=${term}`)
     }
 
-    const handlePageClick = ({ selected }) => {
+    const handlePageClick = useCallback(({ selected }) => {
         console.log('selected:', selected)
         fetchEvents(`&keyword=${searchTerm}&page=${selected}&size=3`)
-    }
+    }, [searchTerm, fetchEvents])
 
     const renderEvents = () => {
         if (isLoading) {
@@ -45,6 +46,7 @@ export const Home = () => {
         }
         return (
             <div>
+                <button onClick={() => setIsToogle(!isToggle)}>{isToggle ? 'ON' : 'OFF'}</button>
                 <Events searchTerm={searchTerm} events={events} />
                 <ReactPaginate
                     className={styles.pagination}

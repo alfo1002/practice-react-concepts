@@ -30,3 +30,4 @@ Prácticas:
 - practica con useNavigate con las tabs
 - practica con localstorage para información del perfil de usuario
 - practica obteniendo lista de eventos con like en perfil
+- practica con Memo(componentes), useMemo(calculos) y useCallback(funciones)
